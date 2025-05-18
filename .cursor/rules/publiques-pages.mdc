@@ -1,0 +1,109 @@
+---
+description: 
+globs: 
+alwaysApply: true
+---
+L’objectif est d’assurer un rendu conforme aux standards modernes, avec une architecture modulaire, une cohérence visuelle et une intégration fluide des technologies suivantes :
+
+Laravel 12 (avec ses nouvelles pratiques de configuration)
+
+Inertia + React pour le frontend
+
+Tailwind CSS 4, désormais configuré sans fichier tailwind.config.js, en utilisant les paramètres et conventions par défaut
+
+shadcn/ui pour les composants d’interface
+
+lucideicon pour la gestion des icônes
+
+Directives Techniques et Fonctionnelles :
+
+Stack Technologique :
+
+Backend :
+
+Utiliser Laravel 12 en suivant les nouvelles pratiques recommandées pour organiser les routes, services et la logique métier.
+
+Frontend :
+
+Développer avec Inertia et React pour offrir une expérience SPA réactive et fluide.
+
+Style et UI :
+
+Tailwind CSS 4 : Exploiter les classes utilitaires et la configuration par défaut ou locale, sans recourir à un fichier tailwind.config.js global.
+
+shadcn/ui : Employer les composants UI standardisés pour accélérer le développement et maintenir une cohérence visuelle.
+
+lucideicon : Intégrer des icônes pour enrichir l’interface de façon esthétique et homogène.
+
+Conception UI/UX :
+
+Créer une harmonisation visuelle via les classes utilitaires de Tailwind CSS 4, en appliquant une palette de couleurs et des thèmes définis directement dans le code ou via des variables CSS.
+
+Assurer une interface responsive, adaptée à tous les supports (mobile, tablette, desktop) avec des temps de chargement optimisés.
+
+Principes de Codage :
+
+Modularité et Réutilisabilité : Développer des composants React modulaires et réutilisables, accompagnés de hooks et modules bien séparés pour la gestion d’état et la logique spécifique.
+
+Architecture Claire : Respecter l’architecture MVC côté Laravel et une hiérarchie claire côté React/Inertia.
+
+Documentation et Commentaires : Insérer des commentaires explicatifs et une documentation inline afin de faciliter la maintenance et l’évolution du projet.
+
+Structure Fonctionnelle des Pages Publiques :
+
+Page d’Accueil :
+
+Bannière promotionnelle dynamique, affichage des produits populaires et nouveautés, et mise en avant des catégories avec icônes (lucideicon).
+
+Recherche Avancée :
+
+Moteur de recherche avec filtres dynamiques (catégorie, prix, localisation, etc.) pour une navigation intuitive.
+
+Catalogue Produits & Services :
+
+Navigation par catégories/sous-catégories avec des fiches produits détaillées (images, description, prix, avis/notes).
+
+Panier & Paiement :
+
+Interface pour l’ajout rapide d’articles, intégration d’un système de paiement sécurisé et suivi en temps réel des commandes.
+
+Compte Utilisateur :
+
+Gestion des comptes pour acheteurs et vendeurs, avec options d’inscription (email, réseaux sociaux) et gestion du profil.
+
+Support Client :
+
+Intégration d’un chatbot et d’une FAQ interactive pour une assistance réactive.
+
+Règles de Cursor AI :
+
+Configuration et Structure du Projet :
+
+Prioriser la configuration d'une structure de projet claire, incluant la définition des routes côté backend et frontend, tout en intégrant les bibliothèques tierces (lucideicon, shadcn/ui, Tailwind CSS 4).
+
+Respect des Standards Modernes :
+
+Générer un code qui respecte les principes DRY (Don't Repeat Yourself), avec une séparation claire des responsabilités et une documentation structurée.
+
+Harmonisation Visuelle :
+
+Utiliser Tailwind CSS 4 pour appliquer des classes utilitaires et des styles cohérents, en définissant des surcharges locales ou des variables CSS pour adapter la charte graphique, sans recourir à un fichier tailwind.config.js global.
+
+Documentation et Commentaires :
+
+Ajouter des annotations claires et une documentation inline pour chaque module afin d’assurer une compréhension aisée par l’équipe de développement.
+
+
+{
+  "theme_uniformisation": {
+    "description": "Appliquer une uniformisation du design et des couleurs via Tailwind CSS 4 en configurant le fichier app.css pour définir un thème global basé sur des variables CSS.",
+    "instructions": [
+      "1. Dans votre fichier app.css, inclure les directives Tailwind CSS de base, components et utilities.",
+      "2. Définir dans la pseudo-classe :root les variables CSS correspondant à votre palette de couleurs (par exemple, --primary-color, --secondary-color, --accent-color, etc.).",
+      "3. Créer des classes personnalisées qui appliquent ces variables avec la directive @apply pour harmoniser les boutons, fonds, textes et autres composants.",
+      "4. Utiliser ces classes partout dans votre projet pour garantir la cohérence de l'interface."
+    ],
+    "example_code": "/* app.css */\n@tailwind base;\n@tailwind components;\n@tailwind utilities;\n\n:root {\n  --primary-color: #1a202c; /* Exemple : couleur principale */\n  --secondary-color: #2d3748; /* Exemple : couleur secondaire */\n  --accent-color: #3182ce; /* Exemple : couleur d'accentuation */\n  --background-color: #f7fafc; /* Exemple : fond de page */\n  --text-color: #4a5568; /* Exemple : couleur du texte */\n}\n\n/* Exemple de bouton utilisant la couleur principale */\n.btn-primary {\n  @apply bg-[var(--primary-color)] text-white px-4 py-2 rounded;\n}\n\n/* Classe pour un fond de page harmonisé */\n.bg-theme {\n  @apply bg-[var(--background-color)];\n}\n\n/* Classe pour la couleur de texte harmonisée */\n.text-theme {\n  @apply text-[var(--text-color)];\n}\n",
+    "notes": "Cette approche permet de centraliser la gestion des couleurs et de garantir une cohérence visuelle sur l’ensemble des pages sans recourir à un fichier tailwind.config.js."
+  }
+}
